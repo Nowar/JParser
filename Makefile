@@ -17,7 +17,7 @@ out/%.o: src/%.cc $(header_files)
 clean: FORCE
 	rm -rf out/
 
-run: jp FORCE
-	./out/jp test/1_Hello/Hello.class	# for current test
+check: jp FORCE
+	./test/run_test.sh test/1_Hello/
 
 .PHONY: FORCE

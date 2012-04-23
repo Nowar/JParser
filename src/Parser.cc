@@ -34,6 +34,12 @@ bool Parser::Parse() {
       !ParseAttr(fp.Get())) {
     return false;
   }
+  long int pos = ftell(fp.Get());
+  if (fseek(fp.Get(), 0, SEEK_END) == 0) {
+    if (ftell(fp.Get()) != pos) {
+      return false;
+    }
+  }
   return true;
 }
 
