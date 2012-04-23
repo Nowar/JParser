@@ -1,4 +1,4 @@
-CXXFLAGS := -Werror -g
+CXXFLAGS := -Wall -W -Werror -g
 
 src_files := $(wildcard src/*.cc)
 header_files := $(wildcard src/*.h)
@@ -16,5 +16,8 @@ out/%.o: src/%.cc $(header_files)
 
 clean: FORCE
 	rm -rf out/
+
+run: jp FORCE
+	./out/jp test/1_Hello/Hello.class	# for current test
 
 .PHONY: FORCE

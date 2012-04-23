@@ -6,14 +6,14 @@
 //
 // Any advice is welcome. Thank you!
 //==========================================================================//
-#ifndef CLASS_FILE_INFO_H
-#define CLASS_FILE_INFO_H
+#ifndef DUMPER_H
+#define DUMPER_H
 
-#include <stdint.h>
+class ClassFile;
 
-struct ClassFileInfo {
-  uint16_t minor_version_;
-  uint16_t major_version_;
+class Dumper {
+public:
+  void Dump(ClassFile const& klass) const;
 };
 
 #endif

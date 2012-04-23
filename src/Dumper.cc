@@ -6,18 +6,8 @@
 //
 // Any advice is welcome. Thank you!
 //==========================================================================//
-#include <cstdlib>
-#include <cstring>
-#include "Parser.h"
+#include "ClassFile.h"
+#include "Dumper.h"
 
-int main(int argc, char** argv) {
-  Parser p;
-  for (size_t i = 1; i < (unsigned) argc; ++i) {
-    p.SetClassFile(argv[1]);
-    if (!p.Parse()) {
-      return EXIT_FAILURE;
-    }
-    p.DumpClassInfo();
-  }
-  return EXIT_SUCCESS;
+void Dumper::Dump(ClassFile const&) const {
 }
